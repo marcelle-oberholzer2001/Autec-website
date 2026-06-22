@@ -1,3 +1,3 @@
 @echo off
-cd /d C:\dev-websites\Autec-website
+cd /d "%~dp0"
 npx serve .

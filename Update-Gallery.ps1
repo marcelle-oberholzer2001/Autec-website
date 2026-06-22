@@ -8,16 +8,11 @@ $extensions = @('.jpg', '.jpeg', '.png', '.webp', '.gif')
 
 [System.IO.Directory]::CreateDirectory($galleryFolder) | Out-Null
 
-$legacyImages = Get-ChildItem -Path $assets -File -Filter 'gallery-*' |
-    Where-Object { $extensions -contains $_.Extension.ToLowerInvariant() } |
-    ForEach-Object { [PSCustomObject]@{ File = $_; Url = "assets/$($_.Name)" } }
-
-$newImages = Get-ChildItem -Path $galleryFolder -File |
+$images = Get-ChildItem -Path $galleryFolder -File |
     Where-Object { $extensions -contains $_.Extension.ToLowerInvariant() } |
     Sort-Object Name |
     ForEach-Object { [PSCustomObject]@{ File = $_; Url = "assets/gallery/$($_.Name)" } }
 
-$images = @($legacyImages) + @($newImages)
 if (-not $images.Count) {
     throw 'No gallery images were found.'
 }
