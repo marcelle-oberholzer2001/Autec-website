@@ -13,6 +13,7 @@ Static GitHub Pages website for SA Autec Industries.
 ## How to use
 
 1. Replace the placeholder images in `/assets` with your real images using the same file names.
+2. To add gallery photos, copy them into `/assets/gallery/`, then double-click `Update-Gallery.bat`.
 2. Update contact details in the footer and contact page.
 3. Replace `YOUR-WEB3FORMS-ACCESS-KEY` in `contact.html` with your Web3Forms access key.
 4. Upload all files to a GitHub repository.
