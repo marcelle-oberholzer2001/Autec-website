@@ -14,10 +14,11 @@ Static GitHub Pages website for SA Autec Industries.
 
 1. Replace the placeholder images in `/assets` with your real images using the same file names.
 2. To add gallery photos, copy them into `/assets/gallery/`, then double-click `Update-Gallery.bat` before refreshing the gallery page.
-2. Update contact details in the footer and contact page.
-3. Replace `YOUR-WEB3FORMS-ACCESS-KEY` in `contact.html` with your Web3Forms access key.
-4. Upload all files to a GitHub repository.
-5. Enable GitHub Pages from the repository settings.
+3. To add product photos, copy them into the matching folder in `/assets/products/`, then double-click `Update-Product-Images.bat` before refreshing the relevant product page.
+4. Product image folders are: `cil-containerized-plant`, `concentrators`, `carbon-pumps`, `slurry-pumps`, `pin-mill`, `mixers`, `hammer-mill`, and `bulldog`.
+5. Update contact details in the footer and contact page.
+6. Upload all files to a GitHub repository.
+7. Enable GitHub Pages from the repository settings.
 
 ## Image names to replace
 
