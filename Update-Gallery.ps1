@@ -23,7 +23,7 @@ $items = foreach ($image in $images) {
     $alt = "SA Autec Industries gallery image: $description"
     $escapedUrl = [System.Security.SecurityElement]::Escape($image.Url)
     $escapedAlt = [System.Security.SecurityElement]::Escape($alt)
-    "<img src=`"$escapedUrl`" alt=`"$escapedAlt`" class=`"gallery-item reveal`">"
+    "<img src=`"$escapedUrl`" alt=`"$escapedAlt`" class=`"gallery-item reveal`" loading=`"lazy`">"
 }
 
 $html = [System.IO.File]::ReadAllText($galleryPage)
