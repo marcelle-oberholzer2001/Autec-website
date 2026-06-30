@@ -117,6 +117,12 @@
   max-width: 720px;
   font-size: 16px;
 }
+.product-closing .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
 
 @media (max-width: 1000px) {
   .product-grid {
