@@ -146,6 +146,11 @@ a {
     rgba(8, 10, 11, 0.08) 100%
   );
 }
+/* Hero text must always be visible — never rely on scroll observer for above-fold content */
+.hero-3d .hero-content {
+  opacity: 1 !important;
+  transform: none !important;
+}
 .hero-content {
   position: relative;
   z-index: 2;
