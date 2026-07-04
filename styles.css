@@ -833,18 +833,7 @@ h4 {
   display: none;
 }
 
-/* Section kicker: decorative gold dash before the text */
-.section-kicker::before,
-.eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 2px;
-  background: var(--lightgold);
-  vertical-align: middle;
-  margin-right: 10px;
-  margin-bottom: 2px;
-}
+/* Section kicker: no decorative dash before the text */
 
 /* Nav: sliding gold underline on hover / active */
 .main-nav a {
