@@ -216,6 +216,30 @@ h4 {
   flex-wrap: wrap;
   margin-top: 34px;
 }
+.hero-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.hero-trust-strip div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-trust-strip strong {
+  font: 800 26px "Montserrat", Arial, sans-serif;
+  color: var(--white);
+}
+.hero-trust-strip span {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -277,7 +301,7 @@ h4 {
 }
 .feature-card img,
 .project-card img {
-  height: 230px;
+  height: 240px;
   width: 100%;
   object-fit: cover;
 }
@@ -611,6 +635,11 @@ h4 {
   }
   h1 {
     font-size: 38px;
+  }
+  .hero-trust-strip {
+    gap: 20px 28px;
+    margin-top: 30px;
+    padding-top: 20px;
   }
   .section {
     padding: 70px 0;
