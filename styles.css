@@ -146,7 +146,7 @@ a {
     rgba(8, 10, 11, 0.08) 100%
   );
 }
-/* Hero text must always be visible — never rely on scroll observer for above-fold content */
+/* Hero text must always be visible; never rely on scroll observer for above-fold content */
 .hero-3d .hero-content {
   opacity: 1 !important;
   transform: none !important;
@@ -865,7 +865,7 @@ h4 {
   width: 100%;
 }
 
-/* Cards: smooth hover — gold glow + lift */
+/* Cards: smooth hover, gold glow + lift */
 .feature-card,
 .project-card {
   transition:

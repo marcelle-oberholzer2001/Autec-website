@@ -22,13 +22,13 @@
     var loader = new THREE.TextureLoader();
     loader.load('assets/hero-plant-1.jpg', function (tex) {
       tex.colorSpace = THREE.SRGBColorSpace;
-      // Sharp anisotropic filtering — fixes the pixelation on oblique surfaces
+      // Sharp anisotropic filtering, fixes the pixelation on oblique surfaces
       tex.anisotropy  = renderer.capabilities.getMaxAnisotropy();
       tex.minFilter   = THREE.LinearMipmapLinearFilter;
       tex.magFilter   = THREE.LinearFilter;
       tex.needsUpdate = true;
 
-      // 160×107 — sees ~70% of the image width, plenty of sunset + plant
+      // 160×107, sees ~70% of the image width, plenty of sunset + plant
       var plane = new THREE.Mesh(
         new THREE.PlaneGeometry(160, 107),
         new THREE.MeshBasicMaterial({ map: tex })
