@@ -388,7 +388,7 @@ h4 {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 34px;
 }
 .site-footer h3,
