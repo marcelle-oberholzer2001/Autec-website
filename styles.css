@@ -147,7 +147,7 @@ a {
   );
 }
 /* Hero text must always be visible; never rely on scroll observer for above-fold content */
-.hero-3d .hero-content {
+.hero .hero-content {
   opacity: 1 !important;
   transform: none !important;
 }

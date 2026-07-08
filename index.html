@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,6 +20,7 @@
     <meta property="og:url" content="https://www.saautec.co.za/index.html" />
     <meta property="og:image" content="https://www.saautec.co.za/assets/hero-home.jpg" />
     <link rel="canonical" href="https://www.saautec.co.za/index.html" />
+    <link rel="preload" as="image" href="assets/hero-home.jpg" />
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,8 +82,10 @@
     </header>
 
     <main>
-      <section class="hero hero-3d">
-        <canvas id="plant-canvas"></canvas>
+      <section
+        class="hero"
+        style="background-image: url(&quot;assets/hero-home.jpg&quot;)"
+      >
         <div class="hero-overlay"></div>
         <div class="container hero-content reveal">
           <p class="eyebrow">Mining • Processing • Engineering</p>
@@ -325,3 +328,31 @@
           ><a href="products.html">Concentrators</a
           ><a href="products.html">Pumps</a><a href="products.html">Agitators</a>
         </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Phone: <a href="tel:+27825649988">+27 82 564 9988</a></p>
+          <p>
+            Email:
+            <a href="mailto:admin@autec.co.za?subject=Website%20enquiry"
+              >admin@autec.co.za</a
+            >
+          </p>
+          <p>
+            Address:
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=SA%20Autec%20Industries%20Pty%20Ltd"
+              target="_blank"
+              rel="noopener"
+              >Plot 7, Eland Street, Rietfontein AH, Pretoria East, Gauteng,
+              South Africa</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Engineering Solutions for Africa's Mining Industry
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
