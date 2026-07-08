@@ -941,6 +941,63 @@ h4 {
   border-color: rgba(197, 154, 58, 0.22);
 }
 
+/* ─── Cinematic "drone" hero: crossfading slides with slow drift ─────────── */
+.hero-cinematic {
+  overflow: hidden;
+}
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: -7%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: 27s ease-in-out infinite;
+}
+.hero-slide:nth-child(1) {
+  animation-name: hero-drone-a;
+}
+.hero-slide:nth-child(2) {
+  animation-name: hero-drone-b;
+  animation-delay: 9s;
+}
+.hero-slide:nth-child(3) {
+  animation-name: hero-drone-c;
+  animation-delay: 18s;
+}
+/* Each slide: fade in, drift while visible (~9s), fade out into the next */
+@keyframes hero-drone-a {
+  0% { opacity: 0; transform: scale(1.14) translateX(2.5%); }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  41% { opacity: 0; transform: scale(1.04) translateX(-1.5%); }
+  100% { opacity: 0; transform: scale(1.04) translateX(-1.5%); }
+}
+@keyframes hero-drone-b {
+  0% { opacity: 0; transform: scale(1.04) translateX(-2.5%) translateY(1%); }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  41% { opacity: 0; transform: scale(1.14) translateX(1.5%) translateY(-1%); }
+  100% { opacity: 0; transform: scale(1.14) translateX(1.5%) translateY(-1%); }
+}
+@keyframes hero-drone-c {
+  0% { opacity: 0; transform: scale(1.1) translateY(-2%); }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  41% { opacity: 0; transform: scale(1.02) translateY(1.5%); }
+  100% { opacity: 0; transform: scale(1.02) translateY(1.5%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    animation: none;
+  }
+}
+
 /* Form: gold focus ring */
 .contact-form input:focus,
 .contact-form select:focus,
