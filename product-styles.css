@@ -142,6 +142,61 @@
   margin-top: 28px;
 }
 
+/* ── Read-more spec disclosure ──────────────────────────────────────── */
+.spec-toggle {
+  margin-top: 8px;
+}
+.spec-toggle summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font: 700 12px Montserrat, Arial, sans-serif;
+  transition: 0.25s;
+}
+.spec-toggle summary::-webkit-details-marker {
+  display: none;
+}
+.spec-toggle summary::marker {
+  content: "";
+}
+.spec-toggle summary:hover {
+  border-color: var(--lightgold);
+  color: var(--lightgold);
+}
+.spec-toggle summary::after {
+  content: "+";
+  font-size: 16px;
+  line-height: 1;
+}
+.spec-toggle[open] summary::after {
+  content: "\2013";
+}
+.spec-toggle[open] summary {
+  border-color: var(--gold);
+  color: var(--lightgold);
+  margin-bottom: 8px;
+}
+.spec-content {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.spec-block h4 {
+  margin-bottom: 14px;
+}
+.spec-block p {
+  margin: 0 0 14px;
+}
+
 @media (max-width: 1000px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);

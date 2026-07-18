@@ -5,7 +5,8 @@
       "Bash(git commit -m ' *)",
       "mcp__Claude_Preview__preview_start",
       "Bash(curl -L \"https://unpkg.com/three@0.160.0/build/three.min.js\" -o \"C:/dev-websites/Autec-website/three.min.js\" --max-time 30)",
-      "mcp__Claude_in_Chrome__navigate"
+      "mcp__Claude_in_Chrome__navigate",
+      "Bash(npx --version)"
     ]
   }
 }
