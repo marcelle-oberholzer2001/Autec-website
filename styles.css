@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700;800&display=swap");
 
 :root {
   --bg: #0b0d0e;
@@ -179,17 +179,17 @@ h4 {
 }
 h1 {
   font:
-    700 clamp(42px, 7vw, 84px) Cinzel,
-    Georgia,
-    serif;
+    700 clamp(36px, 6vw, 84px) Montserrat,
+    Arial,
+    sans-serif;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 h2 {
   font:
-    700 clamp(30px, 4vw, 52px) Cinzel,
-    Georgia,
-    serif;
+    700 clamp(26px, 4vw, 52px) Montserrat,
+    Arial,
+    sans-serif;
 }
 h3 {
   font:
@@ -634,7 +634,13 @@ h4 {
     padding: 80px 0;
   }
   h1 {
-    font-size: 38px;
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 19px;
   }
   .hero-trust-strip {
     gap: 20px 28px;
@@ -769,23 +775,6 @@ h4 {
 /* Quote the loaded font names so they match exactly */
 body {
   font-family: "Inter", Montserrat, Arial, sans-serif;
-}
-h1 {
-  font: 700 clamp(42px, 7vw, 84px) "Cinzel", Georgia, serif;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-h2 {
-  font: 700 clamp(30px, 4vw, 52px) "Cinzel", Georgia, serif;
-}
-h3 {
-  font: 700 23px "Montserrat", Arial, sans-serif;
-}
-h4 {
-  font: 700 15px "Montserrat", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--lightgold);
 }
 .eyebrow,
 .section-kicker {
