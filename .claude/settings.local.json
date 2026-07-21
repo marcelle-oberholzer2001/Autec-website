@@ -6,7 +6,15 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(curl -L \"https://unpkg.com/three@0.160.0/build/three.min.js\" -o \"C:/dev-websites/Autec-website/three.min.js\" --max-time 30)",
       "mcp__Claude_in_Chrome__navigate",
-      "Bash(npx --version)"
+      "Bash(npx --version)",
+      "Bash(nslookup www.saautec.co.za)",
+      "Bash(nslookup saautec.co.za)",
+      "Bash(nslookup marcelle-oberholzer2001.github.io)",
+      "Bash(gh api *)",
+      "PowerShell(gh api repos/marcelle-oberholzer2001/Autec-website/pages 2>&1)",
+      "Bash(whois saautec.co.za)",
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(python -c \"import PIL; print\\(PIL.__version__\\)\")"
     ]
   }
 }
