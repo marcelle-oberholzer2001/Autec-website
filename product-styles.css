@@ -4,6 +4,7 @@
   gap: 24px;
 }
 .product-card {
+  position: relative;
   background: linear-gradient(180deg, var(--steel), rgba(21, 25, 28, 0.9));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
@@ -11,6 +12,14 @@
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+/* Make the entire card clickable via the View Product link (stretched link) */
+.product-card .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 }
 .product-card img {
   height: 240px;
@@ -63,21 +72,84 @@
   gap: 44px;
   align-items: start;
 }
-.product-photos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+/* ── Swipeable product photo carousel ───────────────────────────────── */
+.gallery-wrap {
+  position: relative;
 }
-.product-photos img {
-  height: 220px;
-  width: 100%;
-  object-fit: cover;
+.product-photos {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-.product-photos img:first-child {
-  grid-column: 1/-1;
-  height: 330px;
+.product-photos::-webkit-scrollbar {
+  display: none;
+}
+.product-photos img {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+}
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font: 400 26px/1 Arial, sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, opacity 0.25s ease;
+}
+.gallery-nav:hover {
+  background: rgba(197, 154, 58, 0.92);
+}
+.gallery-nav:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.gallery-prev {
+  left: 12px;
+}
+.gallery-next {
+  right: 12px;
+}
+.gallery-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 3;
+}
+.gallery-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.gallery-dot.active {
+  background: var(--gold);
+  transform: scale(1.25);
 }
 /* ── Rich product page sections ─────────────────────────────────────── */
 .product-intro {
@@ -210,13 +282,13 @@
   }
 }
 @media (max-width: 640px) {
-  .product-grid,
-  .product-photos {
+  .product-grid {
     grid-template-columns: 1fr;
   }
-  .product-card img,
-  .product-photos img,
-  .product-photos img:first-child {
+  .product-card img {
     height: 230px;
+  }
+  .product-photos img {
+    height: 280px;
   }
 }
