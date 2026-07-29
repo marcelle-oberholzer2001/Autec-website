@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Chris van Rensburg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20262b"/>
+      <stop offset="1" stop-color="#12161a"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="320" fill="url(#bg)"/>
+  <circle cx="320" cy="146" r="92" fill="none" stroke="#c59a3a" stroke-width="3" opacity="0.9"/>
+  <text x="320" y="146" text-anchor="middle" dominant-baseline="central" font-family="Montserrat, Arial, sans-serif" font-size="58" font-weight="700" fill="#e9c877" letter-spacing="2">CvR</text>
+  <text x="320" y="270" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#8a949c">SA AUTEC INDUSTRIES</text>
+</svg>
