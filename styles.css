@@ -1128,6 +1128,9 @@ h2 { letter-spacing: -0.01em; }
   border-color: rgba(197, 154, 58, 0.35);
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45);
 }
+.service-row[id] {
+  scroll-margin-top: 110px;
+}
 /* keep the CTA text clearly the focusable target, but the whole row is clickable */
 .service-row a.btn { position: relative; z-index: 1; }
 
