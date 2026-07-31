@@ -163,3 +163,17 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
   var ta = document.querySelector('.contact-form textarea[name="project_description"]');
   if (ta && !ta.value.trim()) ta.value = 'Wear parts / spares enquiry: ' + item;
 })();
+
+/* ═══ AUTEC · make each wear-part row fully clickable (whole block → its quote link) ═══ */
+(function () {
+  document.querySelectorAll('.wear-parts-list li').forEach(function (li) {
+    var link = li.querySelector('a.wp-quote') || li.querySelector('a[href]');
+    if (!link) return;
+    li.style.cursor = 'pointer';
+    li.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) return;                 // real link behaves normally
+      if (window.getSelection && String(window.getSelection()).length) return;  // don't hijack selection
+      link.click();
+    });
+  });
+})();
