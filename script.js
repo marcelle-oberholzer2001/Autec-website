@@ -142,3 +142,11 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
     new MutationObserver(sync).observe(lbImg, { attributes: true, attributeFilter: ['alt', 'src'] });
   }
 })();
+
+/* ═══ AUTEC · wear-part quote: prefill the contact message from ?item= ═══ */
+(function () {
+  var item = new URLSearchParams(location.search).get('item');
+  if (!item) return;
+  var ta = document.querySelector('.contact-form textarea[name="project_description"]');
+  if (ta && !ta.value.trim()) ta.value = 'Wear parts / spares enquiry: ' + item;
+})();
