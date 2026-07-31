@@ -105,3 +105,39 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
     });
   });
 })();
+
+/* ═══ AUTEC · gallery captions from filenames (hover + lightbox) ═══ */
+(function () {
+  function clean(alt) {
+    if (!alt) return '';
+    var t = alt.replace(/^\s*SA Autec Industries gallery image:\s*/i, '').trim();
+    if (/^gallery[\s-]*\d+$/i.test(t)) return '';   // still a placeholder filename → no caption
+    return t;
+  }
+  document.querySelectorAll('.gallery-grid .gallery-item').forEach(function (img) {
+    var text = clean(img.getAttribute('alt'));
+    if (!text) return;
+    if (img.parentElement && img.parentElement.classList.contains('gallery-figure')) return;
+    var fig = document.createElement('figure');
+    fig.className = 'gallery-figure';
+    img.parentNode.insertBefore(fig, img);
+    fig.appendChild(img);
+    var cap = document.createElement('figcaption');
+    cap.textContent = text;
+    fig.appendChild(cap);
+  });
+  var lb = document.querySelector('.lightbox');
+  if (lb) {
+    var lbImg = lb.querySelector('img');
+    var cap = document.createElement('p');
+    cap.className = 'lightbox-caption';
+    lb.appendChild(cap);
+    var sync = function () {
+      var t = clean(lbImg.getAttribute('alt'));
+      cap.textContent = t;
+      cap.style.display = t ? '' : 'none';
+    };
+    sync();
+    new MutationObserver(sync).observe(lbImg, { attributes: true, attributeFilter: ['alt', 'src'] });
+  }
+})();
