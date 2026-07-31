@@ -91,7 +91,20 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
   }
 })();
 
-/* ═══ AUTEC · make each service block fully clickable (whole row → its CTA) ═══ */
+/* Make each homepage capability card fully clickable. */
+(function () {
+  document.querySelectorAll('.feature-card').forEach(function (card) {
+    var link = card.querySelector('a[href]');
+    if (!link) return;
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a, button, input, textarea, select, label')) return;
+      if (window.getSelection && String(window.getSelection()).length) return;
+      window.location.href = link.href;
+    });
+  });
+})();
+
+/* Make each service block fully clickable (whole row → its CTA). */
 (function () {
   document.querySelectorAll('.service-row').forEach(function (row) {
     var link = row.querySelector('a.btn') || row.querySelector('a[href]');
