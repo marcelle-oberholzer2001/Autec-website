@@ -326,6 +326,19 @@ h4 {
   font-size: 12px;
   letter-spacing: 0.12em;
 }
+.feature-card {
+  cursor: pointer;
+}
+.feature-card a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+.feature-card:focus-within {
+  border-color: rgba(197, 154, 58, 0.6);
+  box-shadow: 0 0 0 3px rgba(197, 154, 58, 0.22), var(--shadow);
+}
 .stats-section {
   padding: 54px 0;
   background: linear-gradient(90deg, var(--gold), var(--lightgold));
