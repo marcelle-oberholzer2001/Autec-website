@@ -299,6 +299,29 @@
   margin: 0 0 14px;
 }
 
+/* CIP page: preserve technical detail without long vertical bullet lists. */
+.cip-product-page .spec-content .feature-list {
+  display: block;
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.75;
+}
+.cip-product-page .spec-content .feature-list li {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.cip-product-page .spec-content .feature-list li::before {
+  content: none;
+}
+.cip-product-page .spec-content .feature-list li::after {
+  content: ", ";
+}
+.cip-product-page .spec-content .feature-list li:last-child::after {
+  content: ".";
+}
+
 @media (max-width: 1000px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
