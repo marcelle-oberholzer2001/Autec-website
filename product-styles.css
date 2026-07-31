@@ -300,25 +300,25 @@
 }
 
 /* CIP page: preserve technical detail without long vertical bullet lists. */
-.cip-product-page .spec-content .feature-list {
+.cil-product-page .spec-content .feature-list {
   display: block;
   color: var(--grey);
   font-size: 15px;
   line-height: 1.75;
 }
-.cip-product-page .spec-content .feature-list li {
+.cil-product-page .spec-content .feature-list li {
   display: inline;
   color: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-.cip-product-page .spec-content .feature-list li::before {
+.cil-product-page .spec-content .feature-list li::before {
   content: none;
 }
-.cip-product-page .spec-content .feature-list li::after {
+.cil-product-page .spec-content .feature-list li::after {
   content: ", ";
 }
-.cip-product-page .spec-content .feature-list li:last-child::after {
+.cil-product-page .spec-content .feature-list li:last-child::after {
   content: ".";
 }
 
