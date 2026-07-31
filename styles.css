@@ -1165,3 +1165,27 @@ h2 { letter-spacing: -0.01em; }
   border-radius: 999px;
   backdrop-filter: blur(6px);
 }
+
+/* ── Hero drone effect: gentler zoom so the image is magnified less (reduces pixelation) ── */
+.hero-slide { inset: -4%; }
+@keyframes hero-drone-a {
+  0%   { opacity: 0; transform: scale(1.08) translateX(1.6%); }
+  6%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; transform: scale(1.0) translateX(-1%); }
+  100% { opacity: 0; transform: scale(1.0) translateX(-1%); }
+}
+@keyframes hero-drone-b {
+  0%   { opacity: 0; transform: scale(1.0) translateX(-1.6%) translateY(0.6%); }
+  6%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; transform: scale(1.08) translateX(1%) translateY(-0.6%); }
+  100% { opacity: 0; transform: scale(1.08) translateX(1%) translateY(-0.6%); }
+}
+@keyframes hero-drone-c {
+  0%   { opacity: 0; transform: scale(1.06) translateY(-1.2%); }
+  6%   { opacity: 1; }
+  33%  { opacity: 1; }
+  41%  { opacity: 0; transform: scale(1.0) translateY(1%); }
+  100% { opacity: 0; transform: scale(1.0) translateY(1%); }
+}

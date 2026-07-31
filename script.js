@@ -111,6 +111,7 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
   function clean(alt) {
     if (!alt) return '';
     var t = alt.replace(/^\s*SA Autec Industries gallery image:\s*/i, '').trim();
+    t = t.replace(/\s*\(\d+\)\s*$/, '').trim();     // drop Windows duplicate suffix like " (2)", " (3)"
     if (/^gallery[\s-]*\d+$/i.test(t)) return '';   // still a placeholder filename → no caption
     return t;
   }
