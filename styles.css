@@ -1189,3 +1189,7 @@ h2 { letter-spacing: -0.01em; }
   41%  { opacity: 0; transform: scale(1.0) translateY(1%); }
   100% { opacity: 0; transform: scale(1.0) translateY(1%); }
 }
+
+/* ── Trust strip: keep "End-to-End" on one line so all four cells align ── */
+.hero-trust-strip div { padding: 2px 18px; }
+.hero-trust-strip strong { white-space: nowrap; font-size: clamp(20px, 2.5vw, 30px); letter-spacing: 0; }
