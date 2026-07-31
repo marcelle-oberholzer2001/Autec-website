@@ -75,6 +75,8 @@
 /* ── Swipeable product photo carousel ───────────────────────────────── */
 .gallery-wrap {
   position: relative;
+  overflow: hidden;
+  border-radius: 14px;
 }
 .product-photos {
   display: flex;
@@ -150,6 +152,34 @@
 .gallery-dot.active {
   background: var(--gold);
   transform: scale(1.25);
+}
+.product-photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 32px 16px 38px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
+  font: 700 13px/1.4 "Montserrat", Arial, sans-serif;
+  letter-spacing: 0.03em;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(.16, .7, .2, 1), opacity 0.35s ease;
+  pointer-events: none;
+}
+.gallery-wrap:hover .product-photo-caption,
+.gallery-wrap:focus-within .product-photo-caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media (hover: none) {
+  .product-photo-caption {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 /* ── Rich product page sections ─────────────────────────────────────── */
 .product-intro {
