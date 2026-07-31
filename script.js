@@ -90,3 +90,18 @@ const form=document.querySelector('.contact-form');if(form){const serviceBoxes=[
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
   }
 })();
+
+/* ═══ AUTEC · make each service block fully clickable (whole row → its CTA) ═══ */
+(function () {
+  document.querySelectorAll('.service-row').forEach(function (row) {
+    var link = row.querySelector('a.btn') || row.querySelector('a[href]');
+    if (!link) return;
+    row.addEventListener('click', function (e) {
+      // let real interactive elements behave normally
+      if (e.target.closest('a, button, input, textarea, select, label')) return;
+      // don't hijack a text selection
+      if (window.getSelection && String(window.getSelection()).length) return;
+      link.click();
+    });
+  });
+})();
