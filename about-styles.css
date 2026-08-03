@@ -54,6 +54,9 @@
 .about-img-stack img:first-child {
   height: 300px;
 }
+.about-img-stack img:only-child {
+  height: 500px;
+}
 
 /* Team */
 .team-grid {
