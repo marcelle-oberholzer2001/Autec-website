@@ -43,6 +43,7 @@
 .about-img-stack {
   display: grid;
   gap: 14px;
+  margin-top: 42px;
 }
 .about-img-stack img {
   width: 100%;
@@ -109,5 +110,8 @@
   .about-img-stack img,
   .about-img-stack img:first-child {
     height: 220px;
+  }
+  .about-img-stack {
+    margin-top: 0;
   }
 }
