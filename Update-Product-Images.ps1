@@ -6,7 +6,7 @@ $productsPage = Join-Path $root 'products.html'
 $extensions = @('.jpg', '.jpeg', '.png', '.webp', '.gif')
 $products = @(
     @{ Slug = 'cil-containerized-plant'; Page = 'product-4500-tpm-cil-containerized-plant.html'; Name = '4500 tpm CIL Containerized Plant' },
-    @{ Slug = 'concentrators'; Page = 'product-concentrators.html'; Name = 'Concentrators' },
+    @{ Slug = 'concentrators'; Page = 'product-concentrators.html'; Name = 'Gold Concentrators' },
     @{ Slug = 'carbon-pumps'; Page = 'product-carbon-pumps.html'; Name = 'Carbon Pumps' },
     @{ Slug = 'slurry-pumps'; Page = 'product-slurry-pumps.html'; Name = 'Slurry Pumps' },
     @{ Slug = 'pin-mill'; Page = 'product-pin-mill.html'; Name = 'Pin Mill' },
