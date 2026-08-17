@@ -1058,7 +1058,7 @@ h2 { letter-spacing: -0.01em; }
   gap: 0; margin-top: 42px; padding: 22px 8px;
   display: grid; grid-template-columns: repeat(4, 1fr);
   border: 1px solid rgba(197, 154, 58, 0.18); border-radius: 16px;
-  background: rgba(12, 14, 15, 0.4); backdrop-filter: blur(12px);
+  background: rgba(12, 14, 15, 0.72); backdrop-filter: blur(12px);
 }
 .hero-trust-strip div { padding: 2px 26px; position: relative; }
 .hero-trust-strip div + div::before {
@@ -1067,9 +1067,20 @@ h2 { letter-spacing: -0.01em; }
 }
 .hero-trust-strip strong {
   font-size: clamp(24px, 3vw, 34px);
-  background: linear-gradient(180deg, #ffffff, var(--lightgold));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  color: var(--lightgold); /* solid, legible fallback for all browsers */
 }
+/* Apply the white→gold gradient text only where it's reliably supported
+   (Safari/iOS, Chrome). Samsung Internet and others keep the solid colour above. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero-trust-strip strong {
+    background: linear-gradient(180deg, #ffffff, var(--lightgold));
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+/* Brighten the small uppercase labels so they stay readable on dimmer/cooler
+   phone screens (e.g. Samsung) where the muted grey washes out. */
+.hero-trust-strip span { color: #cfd4d9; }
 
 /* — Cards → layered glass, gold top-accent, cursor spotlight — */
 .feature-card, .project-card {
