@@ -408,6 +408,14 @@ h4 {
   color: var(--muted);
   margin: 8px 0;
 }
+.wa-link {
+  display: inline !important;
+  color: #25d366 !important;
+  font-weight: 600;
+}
+.wa-link:hover {
+  color: #1fba58 !important;
+}
 .footer-bottom {
   text-align: center;
   color: var(--lightgold);
